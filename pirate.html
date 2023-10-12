@@ -46,7 +46,8 @@
         <p id="locations">Number of locations checked is zero.</p>
         <p id="penalty">Penalty is zero.</p>
         <button id="helpButton" onclick="help()">Click for help</button>
-        <p id="help">Help report.</p>
+        <p id="help">Help report.</p>\
+        <button id="newGameButton" onclick="startNewGame()">New Game</button><br>
 
         <div class="container">
             <div class="game-row">
@@ -150,4 +151,15 @@
           penalty += 2;
           document.getElementById("penalty").textContent = "Penalty: " + penalty;
       }
+      function startNewGame() {
+            checkCount = 0;
+            penalty = 0
+            treasureLocation = Math.round(Math.random() * (24));
+            trapLocation = Math.round(Math.random() * (24));
+            document.getElementById("locations").innerHTML = `Number of locations checked is ${checkCount}`
+            document.getElementById("penalty").innerHTML = `Penalty is ${penalty}`
+
+        }
       </script>
+      </body>
+      </html>

@@ -33,7 +33,7 @@
     <input type="text"id="textInput"><br><br>
     <button id="addFront" class="bg-info" onclick="addFront()">Add front</button><br><br>
     <button id="remove" class="bg-warning"onclick="remove()">Remove</button><br><br>
-		
+	<button onclick="swap()">Swap</button>	
 	
 	<p> Press the below button to create an new element of type div and then add it at the end the container.
 		</p>
@@ -72,7 +72,15 @@
                 const container = document.querySelector(".flex-container");
                 container.removeChild(mergerItems[middleIndex]);
             }
-        };
+        }
+        function swap() {
+            let mergerItems = document.getElementsByClassName("merger");
+            let length = mergerItems.length;
+            let item = document.getElementsByClassName("merger")[Math.floor(Math.random() * length)];
+            let flex = document.getElementById("target");
+            firstChild = flex.firstChild;
+            flex.insertBefore(item, firstChild);
+    }
 	
 </script>
 </html>	
