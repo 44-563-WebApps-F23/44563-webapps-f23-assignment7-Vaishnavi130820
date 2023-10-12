@@ -1,163 +1,153 @@
 <!DOCTYPE html>
-
 <html>
-
     <head>
-
         <title>
-
             Pirates Treasure Hunt
-
         </title>
-
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" 
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" 
+    integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" 
+    integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"></script>
         <style>
-
             .instructions{
-
-                color: rgb(57, 20, 220);
-
+                color: crimson;
             }
-
             body{
-
-                background-color: rgb(189, 222, 135);
-
+                background-color: burlywood;
             }
-
             h3{
-
-                color:rgb(105, 8, 35);
-
+                color:red;
             }
-
             .game-row{
-
                 display: flex;
-
             }
-
             .game-location{
-
                 width: 80px;
-
                 height: 80px;
-
                 margin: 5px;
-
-                border: 1px solid rgb(255, 0, 136);
-
+                border: 1px solid aqua;
                 overflow: hidden;
-
             }
-
             .game-location img {
-
             width: 100%;
-
             height: 100%;
-
-           
-
+            
             }
-
         </style>
 
- 
-
     </head>
-
     <body>
-
         <h3>Find the treasure by Vaishnavi</h3>
-
         <div class="instructions">
-
             <p>Click on the locations to search for treasure, beware the traps</p>
-
         </div>
-
         <p id="locations">Number of locations checked is zero.</p>
-
         <p id="penalty">Penalty is zero.</p>
-
-        <p>Click for help.</p>
-
+        <button id="helpButton" onclick="help()">Click for help</button>
         <p id="help">Help report.</p>
+
         <div class="container">
-
             <div class="game-row">
-
-                <div class="game-location"><img src="starting.jpg" alt="Starting loaction"></div>
-
-                <div class="game-location"><img src="starting.jpg" alt="Starting loaction"></div>
-
-                <div class="game-location"><img src="starting.jpg" alt="Starting loaction"></div>
-
-                <div class="game-location"><img src="starting.jpg" alt="Starting loaction"></div>
-
-                <div class="game-location"><img src="starting.jpg" alt="Starting loaction"></div>
-
+                <div  class="game-location"><img src="starting.jpg" alt="Starting loaction" id="image0" onclick="check(0)"></div>
+                <div class="game-location"><img src="starting.jpg" alt="Starting loaction" id="image01" onclick="check(1)"></div>
+                <div class="game-location"><img src="starting.jpg" alt="Starting loaction" id="image02" onclick="check(2)"></div>
+                <div class="game-location"><img src="starting.jpg" alt="Starting loaction" id="image03" onclick="check(3)"></div>
+                <div class="game-location"><img src="starting.jpg" alt="Starting loaction" id="image04" onclick="check(4)"></div>
             </div>
-
             <div class="game-row">
-
-                <div class="game-location"><img src="starting.jpg" alt="Starting loaction"></div>
-
-                <div class="game-location"><img src="starting.jpg" alt="Starting loaction"></div>
-
-                <div class="game-location"><img src="starting.jpg" alt="Starting loaction"></div>
-
-                <div class="game-location"><img src="starting.jpg" alt="Starting loaction"></div>
-
-                <div class="game-location"><img src="starting.jpg" alt="Starting loaction"></div>
-
+                <div class="game-location"><img src="starting.jpg" alt="Starting loaction" id="image05" onclick="check(5)"></div>
+                <div class="game-location"><img src="starting.jpg" alt="Starting loaction" id="image06" onclick="check(6)"></div>
+                <div class="game-location"><img src="starting.jpg" alt="Starting loaction" id="image07" onclick="check(7)"></div>
+                <div class="game-location"><img src="starting.jpg" alt="Starting loaction" id="image08" onclick="check(8)"></div>
+                <div class="game-location"><img src="starting.jpg" alt="Starting loaction" id="image09" onclick="check(9)"></div>
             </div>
-
             <div class="game-row">
-
-                <div class="game-location"><img src="starting.jpg" alt="Starting loaction"></div>
-
-                <div class="game-location"><img src="starting.jpg" alt="Starting loaction"></div>
-
-                <div class="game-location"><img src="starting.jpg" alt="Starting loaction"></div>
-
-                <div class="game-location"><img src="starting.jpg" alt="Starting loaction"></div>
-
-                <div class="game-location"><img src="starting.jpg" alt="Starting loaction"></div>
-
+                <div class="game-location"><img src="starting.jpg" alt="Starting loaction" id="image10" onclick="check(10)"></div>
+                <div class="game-location"><img src="starting.jpg" alt="Starting loaction" id="image11" onclick="check(11)"></div>
+                <div class="game-location"><img src="starting.jpg" alt="Starting loaction" id="image12" onclick="check(12)"></div>
+                <div class="game-location"><img src="starting.jpg" alt="Starting loaction" id="image13" onclick="check(13)"></div>
+                <div class="game-location"><img src="starting.jpg" alt="Starting loaction" id="image14" onclick="check(14)"></div>
             </div>
-
             <div class="game-row">
-
-                <div class="game-location"><img src="starting.jpg" alt="Starting loaction"></div>
-
-                <div class="game-location"><img src="starting.jpg" alt="Starting loaction"></div>
-
-                <div class="game-location"><img src="starting.jpg" alt="Starting loaction"></div>
-
-                <div class="game-location"><img src="starting.jpg" alt="Starting loaction"></div>
-
-                <div class="game-location"><img src="starting.jpg" alt="Starting loaction"></div>
-
+                <div class="game-location"><img src="starting.jpg" alt="Starting loaction" id="image15" onclick="check(15)"></div>
+                <div class="game-location"><img src="starting.jpg" alt="Starting loaction" id="image16" onclick="check(16)"></div>
+                <div class="game-location"><img src="starting.jpg" alt="Starting loaction" id="image17" onclick="check(17)"></div>
+                <div class="game-location"><img src="starting.jpg" alt="Starting loaction" id="image18" onclick="check(18)"></div>
+                <div class="game-location"><img src="starting.jpg" alt="Starting loaction" id="image19" onclick="check(19)"></div>
             </div>
-
             <div class="game-row">
-
-                <div class="game-location"><img src="starting.jpg" alt="Starting loaction"></div>
-
-                <div class="game-location"><img src="starting.jpg" alt="Starting loaction"></div>
-
-                <div class="game-location"><img src="starting.jpg" alt="Starting loaction"></div>
-
-                <div class="game-location"><img src="starting.jpg" alt="Starting loaction"></div>
-
-                <div class="game-location"><img src="starting.jpg" alt="Starting loaction"></div>
-
+                <div class="game-location"><img src="starting.jpg" alt="Starting loaction" id="image20" onclick="check(20)"></div>
+                <div class="game-location"><img src="starting.jpg" alt="Starting loaction" id="image21" onclick="check(21)"></div>
+                <div class="game-location"><img src="starting.jpg" alt="Starting loaction" id="image22" onclick="check(22)"></div>
+                <div class="game-location"><img src="starting.jpg" alt="Starting loaction" id="image23" onclick="check(23)"></div>
+                <div class="game-location"><img src="starting.jpg" alt="Starting loaction" id="image24" onclick="check(24)"></div>
             </div>
-
- 
 
         </div>
-        
-    </body>
-    </html>
+
+        <script>
+          let ids = [
+              "image0", "image01", "image02", "image03", "image04",
+              "image05", "image06", "image07", "image08", "image09",
+              "image10", "image11", "image12", "image13", "image14",
+              "image15", "image16", "image17", "image18", "image19",
+              "image20", "image21", "image22", "image23", "image24"
+          ];
+          let checkCount = 0;
+          let penalty = 0;
+          let lastCheck = 0;
+          let treasureLocation = 5;
+          let trapLocation = 18;
+          let gameOver = false;
+          function check(position) {
+              if (!gameOver)
+              { 
+                  let imageId = ids[position];
+                  let imageElement = document.getElementById(imageId);
+                  if (position === treasureLocation) 
+                  {
+                      imageElement.src = "treasure.jpg";
+                      gameOver = true;
+                      penalty -= 3;
+                  
+                  }
+                  else if (position === trapLocation)
+                   {   
+                      imageElement.src = "trap.jpg";
+                      gameOver = true;
+                      penalty += 4;
+                   }
+                  else
+                  {
+                      imageElement.src = "piratehat.jpg";
+                      penalty+=1;
+                  }
+                  checkCount++;
+                  document.getElementById("locations").textContent = "Locations: " + position;
+                  document.getElementById("penalty").textContent = "Penalty: " + penalty;
+                  lastCheck = position;
+              }
+  
+          }
+          function help() 
+          {
+              let treasureRow = Math.floor(treasureLocation / 5);
+              let treasureCol = treasureLocation % 5;
+              let lastLocationRow = Math.floor(lastCheck / 5);
+              let lastLocationCol = lastCheck % 5;
+              let rowDifference = Math.abs(treasureRow - lastLocationRow);
+              let colDifference = Math.abs(treasureCol - lastLocationCol);
+  
+          if ((rowDifference === 1 && colDifference <= 1) || (colDifference === 1 && rowDifference <= 1)) {
+              document.getElementById("help").textContent = "Can smell it";
+          } else if (rowDifference + colDifference === 2) {
+              document.getElementById("help").textContent = "Close Matie";
+          } else {
+              document.getElementById("help").textContent = "Step Faster";
+          }
+          penalty += 2;
+          document.getElementById("penalty").textContent = "Penalty: " + penalty;
+      }
+      </script>
